@@ -1,0 +1,128 @@
+
+@page {
+    margin-top: 0.5cm;
+    margin-bottom: 1cm;
+    margin-right: 1.5cm;
+    margin-left: 1.5cm;
+    padding-bottom: 0cm;
+}
+
+table.borderless td,table.borderless th{
+    border: none !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    line-height: 1 !important;
+}
+
+
+
+
+table.fullborder th, table.fullborder td {
+border: 1px solid black !important;
+vertical-align: middle !important;
+text-align: center !important;
+/* font-size: 10px !important; */
+}
+
+table.fullborder2 th, table.fullborder2 td {
+border: 1px solid black !important;
+vertical-align: middle !important;
+text-align: center !important;
+font-size: 6px !important;
+}
+
+footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 1.8cm;
+}
+
+
+
+header {
+    position: fixed;
+
+}
+
+
+.page-break {
+    page-break-after: always;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+#metodo{
+    width: 14.3cm;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#metodo th, #metodo td{
+    font-size: 8px !important;
+}
+
+
+#resultados{
+    width: 19.3cm;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#resultados th, #resultados td{
+    font-size: 10px !important;
+}
+
+
+#txt_tabla{
+    font-size: 8px !important;
+    margin-bottom: 0.6cm !important;
+    margin-top: 0.3cm !important;
+    text-align: center !important;
+}
+#tabla{
+    width: 14.3cm;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#tabla th, #tabla td{
+    font-size: 8px !important;
+}
+
+#final{
+    width: 19.3cm;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+#final th, #final td{
+    font-size: 9px !important;
+}
+
+#fina2{
+    width: 10.3cm;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+#fina2 th, #fina2 td, #fina2 p{
+    font-size: 15px !important;
+}
+
+
+.imglogo {
+    width: 4cm;
+}

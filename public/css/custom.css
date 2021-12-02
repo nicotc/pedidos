@@ -1,0 +1,58 @@
+#dataTableBuilder_wrapper .row{
+    margin-bottom: 10px;
+}
+select[name="dataTableBuilder_length"]{
+    height: calc(1.5rem + 2px) !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#dataTableBuilder_filter .form-control{
+    height: calc(1em + 0.75rem + 2px);
+}
+#dataTableBuilder th{
+    text-align: center;
+}
+#dataTableBuilder th[title="Modelo"] {
+    width: 130px !important;
+}
+#dataTableBuilder th[title="Año desde"], #dataTableBuilder th[title="Año hasta"], #dataTableBuilder th[title="Tipo de moto"]  {
+    width: 90px !important;
+}
+#dataTableBuilder th[title="Acción"] {
+    width: 40px !important;
+}
+table.dataTable thead th, table.dataTable thead td{
+    padding: 5px 15px;
+}
+#dataTableBuilder tfoot{
+    display: none;
+}
+#dataTableBuilder_wrapper .row {
+    width: 100%;
+}
+.dataTables_wrapper .dataTables_processing{
+    top: 25px;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.btn{
+    margin-bottom: 10px;
+}
+
+.alert-products{
+    padding: 0.05rem 1.25rem;
+    margin-bottom: 0rem;
+}
+
+.alert-products .badge-pill{
+    font-size: 12px;
+}
+
+.card-family .card-footer{
+    padding: 0.25rem  0.45rem;
+}
+
+.card-family .card-footer .btn-info{
+    margin-top: 10px;
+}

@@ -1,0 +1,99 @@
+@page {
+    margin-top: 0.5cm;
+    margin-bottom: 1cm;
+    margin-right: 1cm;
+    margin-left: 1cm;
+    padding-bottom: 0cm;
+}
+
+header {
+    margin-top: -1.5cm;
+    position: fixed;
+
+}
+
+body{
+    margin-top: 2cm;
+    font-family: Calibri, sans-serif;
+    line-height: 0.5;
+    font-size: 12px;
+}
+
+table.borderless td,table.borderless th{
+    border: none !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    line-height: 0.4 !important;
+}
+
+table.fullborder th, table.fullborder td {
+border: 1.5px solid black !important;
+border-top: 1.5px solid black !important;
+border-left: 1.5px solid black !important;
+border-right: 1.5px solid black !important;
+vertical-align: middle !important;
+text-align: center !important;
+font-size: 10px !important;
+}
+
+table.fullborder2 th, table.fullborder2 td {
+border: 1px solid black !important;
+vertical-align: middle !important;
+text-align: center !important;
+font-size: 6px !important;
+}
+
+footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 1.8cm;
+}
+
+
+.page-break {
+    page-break-after: always;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+#metodo{
+    width: 14.3cm;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#metodo th, #metodo td{
+    font-size: 8px !important;
+}
+
+
+#resultados{
+    width: 19.3cm;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resultados th, #resultados td{
+    font-size: 10px !important;
+}
+
+#txt_tabla{
+    font-size: 8px !important;
+    margin-bottom: 0.6cm !important;
+    margin-top: 0.3cm !important;
+    text-align: center !important;
+}
+
+
+.imglogo {
+    width: 4cm;
+}
+
+.page-break {
+    page-break-after: always;
+}
