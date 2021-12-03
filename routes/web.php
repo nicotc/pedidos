@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});Route::get('/colores', function () {
+});
+Route::get('/colores', function () {
     return view('colores');
 });
 
@@ -49,6 +51,11 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 
-
+Route::get('/cache', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('route:clear');
+    Artisan::call('config:clear');
+    Artisan::call('view:clear');
+});
 
 
