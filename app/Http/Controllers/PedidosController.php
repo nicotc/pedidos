@@ -329,9 +329,9 @@ $estado = $this->estado();
 
 
 
-        $pdf = app('dompdf.wrapper');
-        $pdf->loadView('pedidos.pdf', ['pedidos' => $pedidos ])
-        ->setPaper('letter', 'portrait');
+        //$pdf = app('dompdf.wrapper');
+       // $pdf->loadView('pedidos.pdf', ['pedidos' => $pedidos ])
+        //->setPaper('letter', 'portrait');
 
 
        //  return $pdf->stream('pdf.pdf');
