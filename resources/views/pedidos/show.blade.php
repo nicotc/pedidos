@@ -109,12 +109,12 @@ font-size: 10px !important;
                         <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">BOCETOS</td>
                     </tr>
                 </table>
-                <hr style="border: 1px solid #000000; margin-top: -20px !important; margin-bottom:  " >
+                <hr style="border: 1px solid #000000; margin-top: -10px !important; margin-bottom:  " >
 
 
                         @forelse ($bocetos as  $boceto)
                             @php
-                                $boceto =  str_replace('public/', '/storage/', $boceto);
+                                // $boceto =  str_replace('public/', '/storage/', $boceto);
                             @endphp
                             <table class="table borderless head"  id="categorias-table" style="margin-top: 1.5cm">
                             <tr>
@@ -133,7 +133,28 @@ font-size: 10px !important;
                         <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">MEDIDAS</td>
                     </tr>
                 </table>
+
+
+
+
                 <hr style="border: 1px solid #000000; margin-top: -20px !important; " >
+
+
+                @forelse ($medidas as  $medida)
+                @php
+                    // $medida =  str_replace('public/', '/storage/', $medida);
+                @endphp
+                <table class="table borderless head"  id="categorias-table" style="margin-top: 1.5cm">
+                <tr>
+                    <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">
+                        <img src="{{ $medida }}" style="width: 12cm;">
+                    </td>
+                </tr>
+            </table>
+
+            @empty
+
+            @endforelse
 
                 <hr style="border: 1px solid #000000; margin-top: -20px !important; " >
 
@@ -168,7 +189,7 @@ font-size: 10px !important;
                         @endphp
                         @forelse ($adjuntos as  $adjunto)
                             @php
-                                $adjunto =  str_replace('public/', '/storage/', $adjunto);
+                                // $adjunto =  str_replace('public/', '/storage/', $adjunto);
                             @endphp
                             <table class="table borderless head"  id="categorias-table" style="margin-top: 1.5cm">
                             <tr>

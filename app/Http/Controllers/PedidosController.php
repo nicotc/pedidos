@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreatePedidosRequest;
 use App\Http\Requests\UpdatePedidosRequest;
+use Illuminate\Http\File;
+
+
 
 class PedidosController extends AppBaseController
 {
@@ -38,7 +41,7 @@ class PedidosController extends AppBaseController
     public function index(PedidosDataTable $pedidosDataTable)
     {
 
-    
+
 
         return $pedidosDataTable->render('pedidos.index');
     }
@@ -73,22 +76,39 @@ $estado = $this->estado();
 
         if($request->file('medidas') != null ){
             foreach($request->file('medidas') as $media){
-                $name = "public/medidas";
-                $path_medidas[] = Storage::putFile($name,$media);
+
+                $destinationPath = "./medidas";
+                $destinationPath1 = "/medidas";
+                $profileImage = date('YmdHis') . "." . $media->getClientOriginalName();
+                $media->move($destinationPath, $profileImage);
+                $path_medidas[] = $destinationPath1."/".$profileImage;
+
+
             }
         }
 
         if($request->file('boceto') != null ){
-            foreach ($request->file('boceto') as $media) {
-                $name = "public/boceto";
-                $path_boceto[] = Storage::putFile($name, $media);
+            foreach ($request->file('boceto') as $boceto) {
+
+                $destinationPath = "./boceto";
+                $destinationPath1 = "/boceto";
+                $profileImage = date('YmdHis') . "." . $boceto->getClientOriginalName();
+                $boceto->move($destinationPath, $profileImage);
+                $path_boceto[] = $destinationPath1."/".$profileImage;
+
+
             }
         }
 
         if ($request->file('adjuntos') != null) {
-            foreach ($request->file('adjuntos') as $media) {
-                $name = "public/adjuntos";
-                $path_adjuntos[] = Storage::putFile($name, $media);
+            foreach ($request->file('adjuntos') as $adjuntos) {
+                $destinationPath = "./adjuntos";
+                $destinationPath1 = "/adjuntos";
+                $profileImage = date('YmdHis') . "." . $adjuntos->getClientOriginalName();
+                $adjuntos->move($destinationPath, $profileImage);
+                $path_adjuntos[] = $destinationPath1."/".$profileImage;
+
+
             }
         }
 
