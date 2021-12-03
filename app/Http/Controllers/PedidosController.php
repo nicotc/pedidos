@@ -334,8 +334,8 @@ $estado = $this->estado();
         ->setPaper('letter', 'portrait');
 
 
-         return $pdf->stream('pdf.pdf');
-       //  return view('pedidos.pdf');
+       //  return $pdf->stream('pdf.pdf');
+         return view('pedidos.pdf', ['pedidos' => $pedidos ]);
 
 
 
