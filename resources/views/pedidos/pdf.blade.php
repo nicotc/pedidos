@@ -39,18 +39,18 @@
 
             <table class="table fullborder head" id="categorias-table">
                 <tr>
-                    <th style="width: 10%; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">
+                    <th style="width: 3.5cm; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">
                         FECHA<br>CARGA:
                     </th>
-                    <th style="width: 20%; text-align: center; font-size: 9pt !important;">
+                    <th style="width: 2.5cm; text-align: center; font-size: 9pt !important;">
                         {{ \Carbon\Carbon::parse($pedidos->created_at)->format('d/m/Y') }}
                     </th>
-                    <th style="width: 10%; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">TALLER:</th>
-                    <th style="width: 20%; text-align: center; font-size: 9pt !important; text-transform: uppercase;">
+                    <th style="width: 2.5cm; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">TALLER:</th>
+                    <th style="width: 5cm; text-align: center; font-size: 9pt !important; text-transform: uppercase;">
                         {{ $pedidos->name }}
                     </th>
 
-                    <th style="width: 20%; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">EXPRESS:</th>
+                    <th style="width: 2.5cm; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">EXPRESS:</th>
                     <th style="width: 20%; text-align: center; font-size: 9pt !important; border-right: 1.5px solid black !important;">
                         @if($pedidos->express == 0){
                             NO
@@ -86,7 +86,7 @@
                 <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">BOCETOS</td>
             </tr>
         </table>
-        <hr style="border: 1px solid #000000; margin-top: -20px !important; margin-bottom:  " >
+        <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " >
 
 
                 @forelse ($bocetos as  $boceto)
@@ -96,7 +96,7 @@
                     <table class="table borderless head"  id="categorias-table" style="margin-top: 1.5cm">
                      <tr>
                         <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">
-                            <img src="{{ public_path($boceto) }}" style="width: 12cm;">
+                            <img src="{{ public_path($boceto) }}" style="width: 10cm;">
                         </td>
                     </tr>
                 </table>
@@ -110,7 +110,8 @@
                 <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">MEDIDAS</td>
             </tr>
         </table>
-        <hr style="border: 1px solid #000000; margin-top: -20px !important; " >
+
+        <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " >
 
                 @forelse ($medidas as  $medida)
                     @php
@@ -119,7 +120,7 @@
                     <table class="table borderless head"  id="categorias-table"  style="margin-top: 1.5cm">
                     <tr>
                         <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">
-                            <img src="{{ public_path($medida) }}" style="width: 12cm;">
+                            <img src="{{ public_path($medida) }}" style="width:10cm;">
                         </td>
                     </tr>
                 </table>
@@ -133,7 +134,8 @@
                         <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">NOTAS</td>
                     </tr>
                 </table>
-                <hr style="border: 1px solid #000000; margin-top: -20px !important; " >
+
+                <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " >
 
                 <table class="table borderless head" id="categorias-table" style="margin-bottom:0.5cm" >
                     <tr>
