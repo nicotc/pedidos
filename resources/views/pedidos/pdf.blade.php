@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ URL::to('/').'/bootstrap.min.css' }}" >
     <link rel="stylesheet" href="{{ URL::to('/').'/pdf.css' }}" >
 
-    @dd(URL::to('/').'/pdf.css')
+    @dd(URL::to('/').'/bootstrap.min.css', URL::to('/').'/pdf.css')
  <style>
      .imglogo{
          width:5cm;
