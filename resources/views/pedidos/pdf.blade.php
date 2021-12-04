@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+
 <style>
     /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
