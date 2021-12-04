@@ -36,7 +36,7 @@
                                       <i class="icon-user"></i>
                                     </span>
                                 </div>
-                                <input type="email" value="root@root.com" class="form-control {{ $errors->has('email')?'is-invalid':'' }}" name="email" value="{{ old('email') }}"
+                                <input type="email" class="form-control {{ $errors->has('email')?'is-invalid':'' }}" name="email" value="{{ old('email') }}"
                                        placeholder="@lang('auth.email')">
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
@@ -50,7 +50,7 @@
                                       <i class="icon-lock"></i>
                                     </span>
                                 </div>
-                                <input type="password" value="password" class="form-control {{ $errors->has('password')?'is-invalid':'' }}" name="password"
+                                <input type="password"  class="form-control {{ $errors->has('password')?'is-invalid':'' }}" name="password"
                                         placeholder="@lang('auth.password')">
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
@@ -71,7 +71,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
+                {{-- <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
                     <div class="card-body text-center">
                         <div>
                             <h2>@lang('auth.register')</h2>
@@ -80,7 +80,7 @@
                                 <a class="btn btn-primary active mt-3" href="{{ url('/register') }}">@lang('auth.register')</a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
