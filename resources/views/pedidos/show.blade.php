@@ -89,7 +89,7 @@ font-size: 10px !important;
                             </th>
                             <th style=" font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">CLIENTE:</th>
                             <th colspan="3" style="width: 25%; text-align: center; font-size: 9pt !important; text-transform: uppercase;">
-                                {{ $pedidos->name }}
+                                {{ $pedidos->cliente }}
                             </th>
                         </tr>
                     </table>
