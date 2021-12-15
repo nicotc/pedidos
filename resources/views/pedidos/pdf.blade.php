@@ -151,12 +151,12 @@ footer {
             <table class="table fullborder head" id="categorias-table">
                 <tr>
                     <th style="width: 3.5cm; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">
-                        FECHA<br>CARGA:
+                        Created <br>at
                     </th>
                     <th style="width: 2.5cm; text-align: center; font-size: 9pt !important;">
                         {{ \Carbon\Carbon::parse($pedidos->created_at)->format('d/m/Y') }}
                     </th>
-                    <th style="width: 2.5cm; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">TALLER:</th>
+                    <th style="width: 2.5cm; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">WORKSHOP:</th>
                     <th style="width: 5cm; text-align: center; font-size: 9pt !important; text-transform: uppercase;">
                         {{ $pedidos->name }}
                     </th>
@@ -166,16 +166,16 @@ footer {
                         @if($pedidos->express == 0){
                             NO
                         @else
-                            SI
+                            YES
                         @endif
                     </th>
                 </tr>
                 <tr>
-                    <th style="font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">FECHA<br>ACTUALIZACIÓN:</th>
+                    <th style="font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">Updated<br>at:</th>
                     <th style="text-align: center; font-size: 9pt !important;">
                         {{ \Carbon\Carbon::parse($pedidos->updated_at)->format('d/m/Y') }}
                     </th>
-                    <th style=" font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">CLIENTE:</th>
+                    <th style=" font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">CUSTOMER:</th>
                     <th colspan="3" style="width: 25%; text-align: center; font-size: 9pt !important; text-transform: uppercase;">
                         {{ $pedidos->cliente }}
                     </th>
@@ -194,7 +194,7 @@ footer {
 
         <table class="table borderless head"  id="categorias-table">
             <tr>
-                <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">BOCETOS</td>
+                <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">SKETCHES</td>
             </tr>
         </table>
         <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " >
@@ -218,7 +218,7 @@ footer {
 
         <table class="table borderless head"  id="categorias-table">
             <tr>
-                <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">MEDIDAS</td>
+                <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">MEASURES</td>
             </tr>
         </table>
 
@@ -242,7 +242,7 @@ footer {
 
                 <table class="table borderless head"  id="categorias-table">
                     <tr>
-                        <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">NOTAS</td>
+                        <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">Note</td>
                     </tr>
                 </table>
 
