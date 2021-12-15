@@ -41,11 +41,11 @@
          estado: estado
          },
         success: function(data){
-        console.log(data);
+            location.href = "/pedidos";
 
         },
         error: function(data){
-          console.log(data);
+          alert("ocurrio un error");
         }
     });
    }
