@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Pedidos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -38,5 +39,9 @@ Route::group([
 //     return $request->user();
 // });
 
-
+route::post('pedidos', function(Request $request){
+    $input = $request->all();
+   Pedidos::where('id', '=', $input['id'])->update(['estado' => $input['estado']]);
+    return json_encode("ok");
+});
 

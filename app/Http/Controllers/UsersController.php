@@ -141,7 +141,7 @@ class UsersController extends AppBaseController
 
 
 
-        DB::table('model_has_roles')->insert([
+        DB::table('model_has_roles')->where('model_id', '=', $users->id)->update([
             'role_id' => $input['role'],
             'model_type' => "App\User",
             'model_id' =>  $users->id,

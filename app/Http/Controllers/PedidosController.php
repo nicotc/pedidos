@@ -9,18 +9,17 @@ use App\Models\Users;
 use App\Http\Requests;
 use App\Models\Estados;
 use App\Models\Pedidos;
+use Illuminate\Http\File;
 use Illuminate\Support\Str;
 use App\DataTables\PedidosDataTable;
 use Illuminate\Support\Facades\Auth;
-
 use App\Repositories\PedidosRepository;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreatePedidosRequest;
 use App\Http\Requests\UpdatePedidosRequest;
-use Illuminate\Http\File;
 
-
+use Illuminate\Support\Facades\Session;
 
 class PedidosController extends AppBaseController
 {
@@ -41,6 +40,14 @@ class PedidosController extends AppBaseController
     public function index(PedidosDataTable $pedidosDataTable)
     {
 
+
+       $pedidos =  Pedidos::pluck('estado', 'id');
+        //$estado = $this->estado();
+        session(['estados' => $this->estado()]);
+        session(['pedidos' =>  $pedidos]);
+
+
+        //Session::set('estados', );
 
 
         return $pedidosDataTable->render('pedidos.index');

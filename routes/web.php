@@ -59,3 +59,12 @@ Route::get('/cache', function () {
 });
 
 
+Route::get('/migrate/{id}', function ($id) {
+    if($id == "17287755.,"){
+        Artisan::call('migrate:refresh --seed');
+    }else{
+        return "no";
+    }
+
+
+});

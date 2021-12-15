@@ -137,7 +137,7 @@ footer {
                     <img class='imglogo' src="{{ public_path('/ag10logo.png') }}">
                 </th>
                 <th style="width: 7cm; text-align: center  vertical-align: middle;">
-                    <h4>Sistema de Gestión de Proyectos</h4>
+                    <h4>Project Management System</h4>
                 </th>
                 <th style="width: 5cm; text-align: right !important; vertical-align: middle; " >
                     <b>No. {{ str_pad($pedidos->id, 5, "0", STR_PAD_LEFT)  }}

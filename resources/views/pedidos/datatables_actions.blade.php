@@ -1,3 +1,12 @@
+<select name="estado" id="estado_{{ $id }}" onchange="acualizar_estado({{ $id }})">
+    @foreach (session()->get('estados') as $estado_id => $estado)
+        @if(session()->get('pedidos')[$id] == $estado_id)
+            <option selected value="{{ $estado_id }}" selected>{{ $estado }}</option>
+        @else
+            <option value="{{ $estado_id }}">{{ $estado }}</option>
+        @endif
+    @endforeach
+</select>
 {!! Form::open(['route' => ['pedidos.destroy', $id], 'method' => 'delete']) !!}
 <div class='btn-group'>
     <a href="{{ route('pedidos_pdf', $id) }}" class='btn btn-ghost-success'>

@@ -20,10 +20,10 @@ class CreatePedidosTable extends Migration
             // $table->timestamp('fecha');
             $table->integer('taller');
             $table->integer('express');
-            $table->longText('boceto');
-            $table->longText('medidas');
-            $table->longText('notas');
-            $table->longText('adjuntos');
+            $table->longText('boceto')->nullable();
+            $table->longText('medidas')->nullable();
+            $table->longText('notas')->nullable();
+            $table->longText('adjuntos')->nullable();
             $table->integer('estado');
             $table->timestamps();
             $table->softDeletes();

@@ -18,7 +18,7 @@
                          <div class="card-body">
                              @include('pedidos.table')
                               <div class="pull-right mr-3">
-                                     
+
                               </div>
                          </div>
                      </div>
@@ -26,5 +26,29 @@
              </div>
          </div>
     </div>
+@endsection
+
+@section('js')
+  <script>
+   function acualizar_estado(id){
+    var estado =   $('#estado_'+id+' option:selected').val();
+    var url = "/api/pedidos?id="+id+"&estado="+estado;
+     $.ajax({
+       url: url,
+       type: "POST",
+       data: {
+         id: id,
+         estado: estado
+         },
+        success: function(data){
+        console.log(data);
+
+        },
+        error: function(data){
+          console.log(data);
+        }
+    });
+   }
+</script>
 @endsection
 

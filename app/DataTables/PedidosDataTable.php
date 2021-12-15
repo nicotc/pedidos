@@ -62,7 +62,8 @@ class PedidosDataTable extends DataTable
            )
                     ->join('estados', 'pedidos.estado', '=', 'estados.id')
                     ->join('users', 'pedidos.taller', '=', 'users.id')
-                    ->where('users.id', '=', Auth::id());
+                    ->where('users.id', '=', Auth::id())
+                    ->orderBy('created_at', 'desc');
        }
        if (($user->roles[0]->name == 'root') or ($user->roles[0]->name == 'admin')) {
             return $model->select(
@@ -79,7 +80,8 @@ class PedidosDataTable extends DataTable
                 'pedidos.updated_at'
             )
                  ->join('estados', 'pedidos.estado', '=', 'estados.id')
-                 ->join('users', 'pedidos.taller', '=', 'users.id');
+                 ->join('users', 'pedidos.taller', '=', 'users.id')
+                 ->orderBy('created_at', 'desc');
 
         }
 
