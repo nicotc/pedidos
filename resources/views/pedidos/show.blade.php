@@ -45,13 +45,13 @@ font-size: 10px !important;
             <header>
                 <table class="table borderless head">
                     <tr>
-                        <th style="width: 7cm; text-align: left  vertical-align: middle;">
+                        {{-- <th style="width: 7cm; text-align: left  vertical-align: middle;">
                             <img class='imglogo' src="/ag10logo.png">
                         </th>
                         <th style="width: 7cm; text-align: center  vertical-align: middle;">
                             <h4>Sistema de Gestión de Proyectos</h4>
-                        </th>
-                        <th style="width: 5cm; text-align: right !important; vertical-align: middle; " >
+                        </th> --}}
+                        <th style="width: 185cm; text-align: right !important; vertical-align: middle; " >
                             <b>No. {{ str_pad($pedidos->id, 5, "0", STR_PAD_LEFT)  }}
                         </td>
                     </tr>
@@ -63,12 +63,12 @@ font-size: 10px !important;
                     <table class="table fullborder head" id="categorias-table">
                         <tr>
                             <th style="width: 10%; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">
-                                FECHA<br>CARGA:
+                                DATE
                             </th>
                             <th style="width: 20%; text-align: center; font-size: 9pt !important;">
                                 {{ \Carbon\Carbon::parse($pedidos->created_at)->format('d/m/Y') }}
                             </th>
-                            <th style="width: 10%; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">TALLER:</th>
+                            <th style="width: 10%; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">FACTORY:</th>
                             <th style="width: 20%; text-align: center; font-size: 9pt !important; text-transform: uppercase;">
                                 {{ $pedidos->name }}
                             </th>
@@ -78,16 +78,16 @@ font-size: 10px !important;
                                 @if($pedidos->express == 0){
                                     NO
                                 @else
-                                    SI
+                                    YES
                                 @endif
                             </th>
                         </tr>
                         <tr>
-                            <th style="font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">FECHA<br>ACTUALIZACIÓN:</th>
+                            <th style="font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">LAST<br>UPDATE:</th>
                             <th style="text-align: center; font-size: 9pt !important;">
                                 {{ \Carbon\Carbon::parse($pedidos->updated_at)->format('d/m/Y') }}
                             </th>
-                            <th style=" font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">CLIENTE:</th>
+                            <th style=" font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">CUSTOMER:</th>
                             <th colspan="3" style="width: 25%; text-align: center; font-size: 9pt !important; text-transform: uppercase;">
                                 {{ $pedidos->cliente }}
                             </th>
@@ -104,12 +104,12 @@ font-size: 10px !important;
 
                     @endphp
 
-                <table class="table borderless head"  id="categorias-table">
+                {{-- <table class="table borderless head"  id="categorias-table">
                     <tr>
                         <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">BOCETOS</td>
                     </tr>
                 </table>
-                <hr style="border: 1px solid #000000; margin-top: -10px !important; margin-bottom:  " >
+                <hr style="border: 1px solid #000000; margin-top: -10px !important; margin-bottom:  " > --}}
 
 
                         @forelse ($bocetos as  $boceto)
@@ -128,7 +128,7 @@ font-size: 10px !important;
 
                         @endforelse
 
-                <table class="table borderless head"  id="categorias-table">
+                {{-- <table class="table borderless head"  id="categorias-table">
                     <tr>
                         <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">MEDIDAS</td>
                     </tr>
@@ -138,7 +138,7 @@ font-size: 10px !important;
 
 
                 <hr style="border: 1px solid #000000; margin-top: -20px !important; " >
-
+ --}}
 
                 @forelse ($medidas as  $medida)
                 @php
@@ -157,13 +157,13 @@ font-size: 10px !important;
             @endforelse
 
                 <hr style="border: 1px solid #000000; margin-top: -20px !important; " >
-
+{{--
                         <table class="table borderless head"  id="categorias-table">
                             <tr>
                                 <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">NOTAS</td>
                             </tr>
                         </table>
-                        <hr style="border: 1px solid #000000; margin-top: -20px !important; " >
+                        <hr style="border: 1px solid #000000; margin-top: -20px !important; " > --}}
 
                         <table class="table borderless head" id="categorias-table" style="margin-bottom:0.5cm" >
                             <tr>
@@ -178,7 +178,7 @@ font-size: 10px !important;
 
                         <table class="table borderless head"  id="categorias-table">
                             <tr>
-                                <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">ARCHIVOS ADJUNTOS</td>
+                                <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">Files</td>
                             </tr>
                         </table>
                         <hr style="border: 1px solid #000000; margin-top: -20px !important; " >
@@ -194,7 +194,7 @@ font-size: 10px !important;
                             <table class="table borderless head"  id="categorias-table" style="margin-top: 1.5cm">
                             <tr>
                                 <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">
-                                    <a href='{{ $adjunto }}'>Adjunto </a>
+                                    <a href='{{ $adjunto }}'>File </a>
                                 </td>
                             </tr>
                             </table>

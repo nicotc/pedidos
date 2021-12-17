@@ -133,13 +133,13 @@ footer {
     <header>
         <table class="table borderless head">
             <tr>
-                <th style="width: 7cm; text-align: left  vertical-align: middle;">
+                {{-- <th style="width: 7cm; text-align: left  vertical-align: middle;">
                     <img class='imglogo' src="{{ public_path('/ag10logo.png') }}">
-                </th>
-                <th style="width: 7cm; text-align: center  vertical-align: middle;">
+                </th> --}}
+                {{-- <th style="width: 14cm; text-align: center  vertical-align: middle;">
                     <h4>Project Management System</h4>
-                </th>
-                <th style="width: 5cm; text-align: right !important; vertical-align: middle; " >
+                </th> --}}
+                <th style="width: 18cm; text-align: right !important; vertical-align: middle; " >
                     <b>No. {{ str_pad($pedidos->id, 5, "0", STR_PAD_LEFT)  }}
                 </td>
             </tr>
@@ -151,12 +151,12 @@ footer {
             <table class="table fullborder head" id="categorias-table">
                 <tr>
                     <th style="width: 3.5cm; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">
-                        Created <br>at
+                        DATE
                     </th>
                     <th style="width: 2.5cm; text-align: center; font-size: 9pt !important;">
                         {{ \Carbon\Carbon::parse($pedidos->created_at)->format('d/m/Y') }}
                     </th>
-                    <th style="width: 2.5cm; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">WORKSHOP:</th>
+                    <th style="width: 2.5cm; font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">FACTORY:</th>
                     <th style="width: 5cm; text-align: center; font-size: 9pt !important; text-transform: uppercase;">
                         {{ $pedidos->name }}
                     </th>
@@ -171,7 +171,7 @@ footer {
                     </th>
                 </tr>
                 <tr>
-                    <th style="font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">Updated<br>at:</th>
+                    <th style="font-weight: bold; text-align: center; color:black; font-size: 9pt !important;">LAST<br>UPDATE:</th>
                     <th style="text-align: center; font-size: 9pt !important;">
                         {{ \Carbon\Carbon::parse($pedidos->updated_at)->format('d/m/Y') }}
                     </th>
@@ -192,12 +192,12 @@ footer {
 
             @endphp
 
-        <table class="table borderless head"  id="categorias-table">
+        {{-- <table class="table borderless head"  id="categorias-table">
             <tr>
                 <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">SKETCHES</td>
             </tr>
-        </table>
-        <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " >
+        </table> --}}
+        {{-- <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " > --}}
 
 
                 @forelse ($bocetos as  $boceto)
@@ -216,13 +216,13 @@ footer {
 
                 @endforelse
 
-        <table class="table borderless head"  id="categorias-table">
+        {{-- <table class="table borderless head"  id="categorias-table">
             <tr>
                 <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">MEASURES</td>
             </tr>
-        </table>
+        </table> --}}
 
-        <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " >
+        {{-- <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " > --}}
 
                 @forelse ($medidas as  $medida)
                     @php
@@ -240,13 +240,13 @@ footer {
 
                 @endforelse
 
-                <table class="table borderless head"  id="categorias-table">
+                {{-- <table class="table borderless head"  id="categorias-table">
                     <tr>
                         <td style="width: 100%; font-weight: bold; text-align: center; color:Black; font-size: 11pt !important;">Note</td>
                     </tr>
-                </table>
+                </table> --}}
 
-                <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " >
+                {{-- <hr style="border: 1px solid #000000; margin-top: -0.25cm !important; margin-bottom: 0.35cm " > --}}
 
                 <table class="table borderless head" id="categorias-table" style="margin-bottom:0.5cm" >
                     <tr>

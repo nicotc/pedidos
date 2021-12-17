@@ -18,7 +18,13 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
     <style>
+.buttons-pdf{
+    display: none;
+}
+.dataTables_filter{
 
+    float: right;
+}
         body{
             font-size: small !important;
         }
@@ -54,7 +60,14 @@
     </style>
     @yield('css')
 </head>
+@role('taller')
+<body class="app header-fixed sidebar-fixed aside-menu-fixed">
+
+@else
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+@endrole
+
+
 <header class="app-header navbar">
     <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
@@ -110,7 +123,11 @@
 </header>
 
 <div class="app-body">
+
+
+
     @include('layouts.sidebar')
+
     <main class="main">
         @yield('content')
     </main>

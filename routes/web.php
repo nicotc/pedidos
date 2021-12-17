@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Artisan;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
+
 Route::get('/colores', function () {
     return view('colores');
 });

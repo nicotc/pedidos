@@ -98,7 +98,7 @@ class PedidosDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->addAction(['width' => '120px', 'printable' => false])
+            ->addAction(['width' => '120px', 'printable' => false,'title' => 'ACTION' ])
             ->parameters([
                 'dom'       => 'Bfrtip',
                 'stateSave' => true,
@@ -121,23 +121,24 @@ class PedidosDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'cliente',
-            'express',
-            'created_at' => ['name' => 'created_at', 'data'=>'created_at', 'title' => 'Fecha'],
+            'id' =>['title' => 'ID'],
+            'cliente' =>['title' => 'CUSTOMER'],
+            'express'=>['title' => 'EXPRESS'],
+            'created_at' => ['name' => 'created_at', 'data'=>'created_at', 'title' => 'DATE'],
             // 'fecha',
             // 'taller'  => ['name' => 'taller', 'data'=>'taller', 'title' => 'Taller'],
-             'taller_name'  => ['name' => 'users.name', 'data'=>'name', 'title' => 'Taller'],
+             'taller_name'  => ['name' => 'users.name', 'data'=>'name', 'title' => 'FACTORY'],
              'estado'  => [
                     'name' => 'estados.estado',
                     'data'=>'estado_name',
-                    'title' => 'Estado'
+                    'title' => 'STATUS'
 
                 ],
             // 'boceto',
             // 'medidas',
-            'notas',
+            // 'NOTES',
             // 'adjuntos',
-            'updated_at' => ['name' => 'updated_at', 'data'=>'updated_at', 'title' => 'Ultima actualizacion'],
+            'updated_at' => ['name' => 'updated_at', 'data'=>'updated_at', 'title' => 'LAST UPDATE'],
         ];
     }
 
